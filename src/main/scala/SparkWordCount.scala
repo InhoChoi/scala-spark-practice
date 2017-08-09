@@ -25,5 +25,7 @@ object SparkWordCountApplication {
 
     println(s"Max is $max")
     println(s"Total length is $letterCount")
+
+    lines.saveAsTextFile("/tmp/test.log")
   }
 }
