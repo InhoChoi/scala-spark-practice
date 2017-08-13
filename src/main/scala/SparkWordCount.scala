@@ -3,7 +3,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object SparkWordCount {
   def main(args: Array[String]): Unit = {
-    SparkWordCountApplication read
+    SparkWordCountApplication.read
   }
 }
 
@@ -29,6 +29,8 @@ object SparkWordCountApplication {
 
     println(s"Max is $max")
     println(s"Total length is $letterCount")
+
+    readLine()
   }
 
   def foreachMethod(input: Iterator[(String, Int)]) = {
